@@ -11,5 +11,7 @@
   },
   "author": "",
   "license": "MIT",
-  "dependencies": {}
+  "dependencies": {
+    "commander": "^13.1.0"
+  }
 }

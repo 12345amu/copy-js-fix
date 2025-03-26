@@ -2,9 +2,19 @@
 
 import fs from 'fs';
 import path from 'path';
+import { program } from 'commander';
 
-const tempDir = path.resolve('temp'); 
-const sourceFile = path.resolve('afterinstall/copy.js'); 
+
+
+program 
+.option('-t, --tempDir <path>', 'specify the temporary directory', 'temp')
+.option('-s, --sourceFile <path>', 'specify the source file to copy', 'afterinstall/copy.js')
+.parse(process.argv);
+
+const options = program.opts();
+
+const tempDir = path.resolve(options.tempDir); 
+const sourceFile = path.resolve(options.sourceFile); 
 // console.log("folder:",sourceFile)
 
 fs.readdir(tempDir, (err, folders) => {
