@@ -1,0 +1,15 @@
+{
+  "name": "copy-js-fix",
+  "version": "1.0.0",
+  "description": "A script to copy copy.js into multiple folders inside temp/",
+  "bin": {
+    "copy-js-fix": "./script.js"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "node script.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {}
+}
